@@ -1,0 +1,20 @@
+{
+  "name": "BulletinBoard",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mongodb": "4.17.0",
+    "mongoose": "7.5.0",
+    "nodemon": "^3.1.2",
+    "punycode": "^2.3.1",
+    "snyk": "^1.1291.1",
+    "uuid": "^9.0.1"
+  },
+  "scripts": {
+    "start": "npx nodemon server.js"
+  }
+}
