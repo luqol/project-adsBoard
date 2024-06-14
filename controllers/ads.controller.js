@@ -7,7 +7,10 @@ const path = require('path');
 exports.getAll = async (req, res) => {
 
     try{
-        res.json( await Ad.find());
+        res.json( await Ad.find().populate({
+            path: 'seller',
+            select: 'login avatar mobile'
+        }));
     }
     catch(err) {
         res.status(500).json({ message: err});

@@ -7,8 +7,8 @@ const adSchema = new mongoose.Schema( {
     img: {type: String, required: true},
     price: {type: Number, required: true},
     localization: {type: String, required: true, minlength: 3, maxlength: 50},
-    //seller: {type: mongoose.Schema.Types.ObjectId , required: true, ref: 'User'}
-    seller: {type: String , required: true, ref: 'User'}
+    seller: {type: mongoose.Schema.Types.ObjectId , required: true, ref: 'User'}
+    //seller: {type: String , required: true, ref: 'User'}
 
 });
 
