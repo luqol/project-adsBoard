@@ -65,7 +65,7 @@ exports.login = async (req, res) => {
 exports.getUserInfo = async (req, res) => {
     try {
         if ( req.session.user) {
-            res.send({ login: req.session.user.login});
+            res.send({ login: req.session.user.login, id: req.session.user.id});
         } else {
             res.send({messgae: 'There is no session'});
         }
