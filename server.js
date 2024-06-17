@@ -39,7 +39,12 @@ app.use(express.static(path.join(__dirname, '/client/build')));
 //midleware
 app.use(helmet());
 
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000', // lub adres Twojej aplikacji frontendowej
+    credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
