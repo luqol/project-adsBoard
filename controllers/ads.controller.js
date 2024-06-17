@@ -56,6 +56,9 @@ exports.delete = async (req, res) => {
     try{
         const ad = await Ad.findById(req.params.id);
         if (ad) {
+            fs.unlink(path.join('public/uploads', ad.img ), (err) => {
+                if (err) console.error(`Failed to delete file: ${ad.img}`, err);
+            });
             await Ad.deleteOne( {_id: req.params.id});
             res.json({message: 'Ok'});
         } else {
